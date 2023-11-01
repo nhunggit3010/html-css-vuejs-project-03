@@ -274,7 +274,7 @@ margin-bottom: 1rem;
    
 }
 .hot-deal{
-    background-image: url("/assets/img/exclusive.jpg");
+    background-image: url("./assets/img/exclusive.jpg");
     background-position: center;
     background-repeat: no-repeat;/*画像が繰り返すのを防ぐ*/
    opacity: 0.7;
