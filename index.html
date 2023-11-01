@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400;1,700;1,900&family=Roboto+Slab:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <title>Shoe</title>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container nav-bar">
+                <div class="head_inner d-flex justify-content-between">
+                    <a class="logo-brand">
+                        <img src="./assets/img/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="navbar w-70 d-flex justify-content-between">
+                        <ul class="navbar__list d-flex justify-content-between">
+
+                            <li v-for="item in navbar" class="navbar__item">
+                                <a v-bind:href="ContactUrl" class="navbar__link">{{item}}</a>
+                            </li>
+
+                        </ul>
+
+                        <div class="icon ">
+                            <a class="navbar__link">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <a href="#!" class="navbar__link">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </div>
+                    </nav>
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </header>
+
+
+
+
+        <main class="main">
+            <section class="banner-area">
+                <div class="container">
+                    <div class="banner_bg ">
+                        <div class="banner-title d-flex justify-content-between">
+                            <div class="banner-content w-50">
+                                <h1 class="title">Nike New <br>Collection!</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et
+                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                <div class="add-bag ">
+                                    <a class=" btn add-btn " href=""><i
+                                            class="fa-solid fa-circle-plus px-2 text-warning"></i></span></a>
+                                    <span class="add-text text-uppercase fs-5 fw-bold">Add to Bag</span>
+                                </div>
+                            </div>
+
+                            <div class="banner-img">
+                                <img class="img-fluid" src="./assets/img/banner-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- service -->
+            <section class="service">
+                <div class="container">
+                    <div class="features d-flex">
+                        <!-- item 1 -->
+
+                        <div class="features-inner__text">
+                            <div class="features-inner__icon fs-2">
+                                <a href="#!"><i class="fa-solid fa-rotate-left"></i></a>
+                            </div>
+                            <h6>Return Policy</h6>
+                            <p>Free Shipping on all order</p>
+                        </div>
+
+                        <!-- item 2 -->
+                        <div class="features-inner__text">
+                            <div class="features-inner__icon fs-2">
+                                <a href="#!"><i class="fa-solid fa-truck"></i></a>
+                            </div>
+                            <h6>Return Policy
+                            </h6>
+                            <p>Free Shipping on all order</p>
+                        </div>
+
+                        <!-- item 3 -->
+                        <div class="features-inner__text">
+                            <div class="features-inner__icon fs-2">
+                                <a href="#!"><i class="fa-solid fa-phone-volume"></i></a>
+                            </div>
+                            <h6>24/7 Support</h6>
+                            <p>Free Shipping on all order</p>
+                        </div>
+
+                        <!-- item 4 -->
+
+                        <div class="features-inner__text">
+                            <div class="features-inner__icon fs-2">
+                                <a href="#!"> <i class="fa-solid fa-credit-card "></i></a>
+                            </div>
+                            <h6>Secure Payment</h6>
+                            <p>Free Shipping on all order</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- category-area -->
+
+            <section class="category-area">
+                <div class="container">
+                    <div class="layout  ">
+
+                        <div class="layout__items ">
+                            <img v-bind:src="LayoutItem1">
+                        </div>
+
+
+
+
+                        <div class="layout__items">
+                            <img v-bind:src="LayoutItem2">
+                        </div>
+
+
+
+                        <div class="layout__items">
+                            <img src="./assets/img/c5.jpg" alt="">
+                        </div>
+
+
+
+
+
+                        <div class="layout__items">
+                            <img src="./assets/img/2_O1CN01mRvWzt1joYczteDS2_94504595.jpg" alt="">
+                        </div>
+
+
+
+                        <div class="layout__items">
+                            <img src="./assets/img/New-Balance-Zante.webp" alt="">
+                        </div>
+
+
+
+                        <div class="layout__items">
+                            <img src="./assets/img/c4.jpg" alt="">
+                        </div>
+
+                    </div>
+
+
+            </section>
+
+
+            <!-- product -->
+
+            <section class="product">
+                <div class="container">
+                    <div class="product-title">
+                        <div class="product-new  d-flex justify-content-end w-50">
+                            <img src="./assets/img/prev (1).png" alt="">
+                            <h2>Latest Product</h2>
+                            <img src="./assets/img/next.png" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore
+                            magna aliqua.</p>
+
+                    </div>
+
+                    <div class="product__image wrap ">
+
+                        <!-- item 1 -->
+                        <div class="product_detail  ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- item 2 -->
+
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- item 3 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- item 4 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- item 5 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+                        <!-- item 6 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+                        <!-- item 7 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- item 8 -->
+                        <div class="product_detail ">
+
+                            <img class="img-fluid" src="./assets/img/p1.jpg" alt="">
+                            <h6 class="product-desc ">addidas New Hammer sole for Sports person</h6>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+                                <h6 class="opacity"> $210.00</h6>
+                            </div>
+
+                            <div class=" btn-shop">
+                                <span><i class="fa-solid fa-bag-shopping "></i></span>
+                                <span><i class="fa-regular fa-heart"></i></span>
+                                <span><i class="fa-solid fa-arrows-spin"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-maximize"></i></span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </section>
+
+
+            <!--  xclusive-deal-area-->
+            <section class="exclusive-deal-area ">
+                <div class="container">
+                    <div class="exclusive-deal-desc d-flex justify-content-between ">
+                        <div class="hot-deal w-50">
+
+                        </div>
+                        <div class="new-product">
+
+                            <div class="product-new  d-flex justify-content-between  ">
+                                <a href="#!" class="prev"><img src="./assets/img/prev (1).png" alt=""></a>
+
+                                <img src="./assets/img/e-p1.png" alt="" class="thumb-img">
+
+                                <a href="#!" class="next"><img src="./assets/img/next.png" alt=""></a>
+                            </div>
+                            <div class="price ">
+
+                                <h6>$150.00</h6>
+
+                                <h6 class="opacity"> $210.00</h6>
+                                <h4>addidas New Hammer sole
+                                    for Sports person</h4>
+
+                            </div>
+                            <div class="add-bag ">
+                                <a class=" btn add-btn " href=""><i
+                                        class="fa-solid fa-circle-plus px-2 text-warning"></i></span></a>
+                                <span class="add-text text-uppercase fs-5 fw-bold">Add to Bag</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- lable -->
+
+            <section class="label">
+                <div class="container">
+                    <div class="label-item">
+                        <a href="#!" class="thumb-img"><img src="./assets/img/brand1.png" alt="" class="label-img"></a>
+                        <a href="#!"><img src="./assets/img/brand2.png" alt="" class="label-img"></a>
+                        <a href="#!"><img src="./assets/img/brand3.png" alt="" class="label-img"></a>
+                        <a href="#!"><img src="./assets/img/brand4.png" alt="" class="label-img"></a>
+                        <a href="#!"><img src="./assets/img/brand5.png" alt="" class="label-img"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deals of the Week -->
+
+            <section class="deal-product">
+                <div class="container">
+                    <div class="product-title">
+                        <div class="deal-desc">
+                            <h2>Deals of the Week</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore
+                            magna aliqua.</p>
+
+                    </div>
+
+                    <div class="wraper">
+                        <div class="deal-rigth ">
+
+                            <!-- item 1 -->
+                            <div class="item d-flex" v-for="item in product">
+                                <div class="deal-img w-30">
+                                   <a v-bind:href="CartUrl"> <img class="cover" v-bind:src="item.Item1"></a>
+                                    
+                                    
+                                </div>
+                                <div class="deal-infor">
+                                    <h6 class="product-desc deal-product ">{{item.name}}</h6>
+                                    <div class="price deal-price">
+
+                                        <h6>{{item.priceDown}}</h6>
+                                        <h6 class="opacity"> {{item.price}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+
+                        </div>
+                        <div class="deal-left">
+                            <img src="./assets/img/c5.jpg" alt="" class="cover">
+                        </div>
+
+
+
+                    </div>
+            </section>
+
+
+            <section >
+                
+            </section>
+        </main>
+
+        <footer class="footer-area section_gap  ">
+            <div class="container  bg-black text-white">
+                <div class="row ">
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h4>About Us</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore dolore
+                                magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h4>Newsletter</h4>
+                            <p>Stay update with our latest</p>
+                            <div class="" id="mc_embed_signup">
+
+                                <form target="_blank" class="form-inline">
+
+                                    <div class="d-flex">
+
+                                        <input class="form-control" name="EMAIL" placeholder="Enter Email" type="email">
+
+
+                                        <button class="click-btn btn btn-default "><i
+                                                class="fa-duotone fa-square-right bg-white"></i></button>
+
+
+
+                                    </div>
+                                    <div class="info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget ">
+                            <h6 class="mb-20">Instragram Feed</h6>
+                            <ul class="instafeed d-flex flex-wrap ">
+                                <li><img src="./assets/img/footer5.jpg " alt=""></li>
+                                <li><img src="./assets/img/i3.jpg" alt=""></li>
+                                <li><img src="./assets/img/footer5.jpg" alt=""></li>
+                                <li><img src="./assets/img/i3.jpg" alt=""></li>
+                                <li><img src="./assets/img/footer5.jpg" alt=""></li>
+                                <li><img src="./assets/img/i3.jpg" alt=""></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget p-4">
+                            <h4>Follow Us</h4>
+                            <p>Let us be social</p>
+                            <div class="footer-social d-flex align-items-center fs-5 ">
+                                <a href="#"><i class="fa-brands fa-facebook p-1 text-white"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok p-1 text-white"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter p-1 text-white"></i></a>
+                                <a href="#"><i class="fa-regular fa-envelope p-1 text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                    <p class="footer-text m-0">Copyright ©2022 All rights reserved | This template is made with <i
+                            class="fa-regular fa-heart text-warning"></i> by <a
+                            class="link text-decoration-none text-warning fw-bold" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                ContactUrl: './componets/contact.html',
+                HomeUrl: './index.html',
+                CartUrl:"./componets/cart.html",
+                LayoutItem1: "./assets/img/giay-truot-van-vans-2.jpg",
+                LayoutItem2: "./assets/img/top-8-thuong-hieu-giay-truot-van-chat-luong-nhat-2019-4d78c9.jpg",
+                navbar: ["Home", "Shop", "Blog", "Page", "Contact"
+
+                ],
+                product: [
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00",Item1:"./assets/img/pr9.jpg" },
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr1.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr2.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr3.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr4.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr5.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr6.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr7.jpg"},
+                    { name: "BLACK LACE HEELS",price:" $210.00",priceDown:"$150.00", Item1:"./assets/img/pr8.jpg"},
+
+            ]
+            },
+
+           
+        })
+    </script>
+
+</body>
+
+</html>
